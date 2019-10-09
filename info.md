@@ -9,7 +9,9 @@
 ## Breaking Changes
 
 ## Changes
-
+{% if version_installed.replace("v", "").replace(".","") | int < 210  %}
+  - Removed unneeded workaround for yeelight
+{% endif %}
 ## Features
 
 ## Bugfixes
