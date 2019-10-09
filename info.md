@@ -3,7 +3,7 @@
 ---
 {% endif %}
 
-{% if installed version_installed != selected_tag %}
+{% if version_installed != selected_tag %}
 # Changes as compared to your installed version:
 
 ## Breaking Changes
