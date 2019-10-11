@@ -2,19 +2,25 @@
 # This is a Beta version!
 ---
 {% endif %}
-
 {% if version_installed != selected_tag %}
+
 # Changes as compared to your installed version:
 
 ## Breaking Changes
 
 ## Changes
-{% if version_installed.replace("v", "").replace(".","") | int < 210  %}
+
+{% if version_installed.replace("v", "").replace(".","") | int < 200  %}
   - Removed unneeded workaround for yeelight
 {% endif %}
+
 ## Features
 
 ## Bugfixes
+
+{% if version_installed.replace("v", "").replace(".","") | int < 201  %}
+  - Fix toggle off: Use elif when toggling
+{% endif %}
 
 ---
 {% endif %}
