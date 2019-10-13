@@ -18,6 +18,9 @@
 
 ## Bugfixes
 
+{% if version_installed.replace("v", "").replace(".","") | int < 202  %}
+  - Fix toggle off turning on again for yeelight: Use else instead of elif
+{% endif %}
 {% if version_installed.replace("v", "").replace(".","") | int < 201  %}
   - Fix toggle off: Use elif when toggling
 {% endif %}
